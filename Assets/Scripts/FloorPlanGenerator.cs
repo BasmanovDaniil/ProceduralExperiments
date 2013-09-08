@@ -449,6 +449,10 @@ public class FloorPlanGenerator : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             scanRenderer.enabled = !scanRenderer.enabled;
