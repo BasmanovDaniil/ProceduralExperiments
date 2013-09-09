@@ -1,4 +1,4 @@
-![](http://habrastorage.org/storage3/7d8/baf/7ab/7d8baf7ab46d91e6ef1e8f000823b74e.gif)![](http://habrastorage.org/storage3/6cf/b09/e45/6cfb09e452d9d9e57f4f33af9b367063.gif)
+![](http://habrastorage.org/storage3/7d8/baf/7ab/7d8baf7ab46d91e6ef1e8f000823b74e.gif)![](http://habrastorage.org/storage3/bc4/69a/32a/bc469a32a2c1d4730499a7248bb559c6.gif)
 
 Процедурный генератор планов помещений на Unity3d.
 
@@ -15,3 +15,5 @@ Enter — Убрать все комнаты и загрузить тестов�
 Левая кнопка мыши на свободной области — Добавить комнату
 
 Esc — Выход
+
+![](http://habrastorage.org/storage3/6cf/b09/e45/6cfb09e452d9d9e57f4f33af9b367063.gif)
