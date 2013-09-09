@@ -16,4 +16,4 @@ Enter — Убрать все комнаты и загрузить тестов�
 
 Esc — Выход
 
-![](http://habrastorage.org/storage3/6cf/b09/e45/6cfb09e452d9d9e57f4f33af9b367063.gif)
+![](http://habrastorage.org/storage3/17c/850/2db/17c8502dbea82f006d4ca585fd163060.gif)
