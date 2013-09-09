@@ -1,3 +1,5 @@
+![](http://habrastorage.org/storage3/7d8/baf/7ab/7d8baf7ab46d91e6ef1e8f000823b74e.gif)![](http://habrastorage.org/storage3/6cf/b09/e45/6cfb09e452d9d9e57f4f33af9b367063.gif)
+
 Процедурный генератор планов помещений на Unity3d.
 
 Shift — Создаёт случайне внешние стены со случайными комнатами
