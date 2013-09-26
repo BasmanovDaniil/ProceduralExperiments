@@ -1,4 +1,17 @@
-![](http://habrastorage.org/storage3/7d8/baf/7ab/7d8baf7ab46d91e6ef1e8f000823b74e.gif)![](http://habrastorage.org/storage3/bc4/69a/32a/bc469a32a2c1d4730499a7248bb559c6.gif)
+ProceduralExperiments
+=====================
+Эксперименты с процедурной генерацией на Unity3d
+
+PGMesh.cs
+=========
+![](http://habrastorage.org/storage3/7f0/31f/a43/7f031fa43c1e01f86e8cff846d7b374c.gif)
+Процедурный генератор моделей
+
+Esc — Выход
+
+FloorPlanGenerator.cs
+=====================
+![](http://habrastorage.org/storage3/892/79b/f71/89279bf71aa5805035cef1971384688c.gif)![](http://habrastorage.org/storage3/98f/adf/25b/98fadf25b287a1a94ed5dc37317ce33c.gif)![](http://habrastorage.org/storage3/a3d/29e/999/a3d29e9990f722f9626780f786300d17.gif)
 
 Процедурный генератор планов помещений на Unity3d.
 
@@ -16,4 +29,4 @@ Enter — Убрать все комнаты и загрузить тестов�
 
 Esc — Выход
 
-![](http://habrastorage.org/storage3/17c/850/2db/17c8502dbea82f006d4ca585fd163060.gif)
+
