@@ -13,6 +13,8 @@ FloorPlanGenerator.cs
 =====================
 ![](http://habrastorage.org/storage3/892/79b/f71/89279bf71aa5805035cef1971384688c.gif)![](http://habrastorage.org/storage3/98f/adf/25b/98fadf25b287a1a94ed5dc37317ce33c.gif)![](http://habrastorage.org/storage3/a3d/29e/999/a3d29e9990f722f9626780f786300d17.gif)
 
+http://basmanovdaniil.github.io/ProceduralExperiments/index.html
+
 Процедурный генератор планов помещений на Unity3d.
 
 Shift — Создаёт случайные внешние стены со случайными комнатами
