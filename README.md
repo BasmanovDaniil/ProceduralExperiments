@@ -5,6 +5,9 @@ ProceduralExperiments
 PGMesh.cs
 =========
 ![](http://habrastorage.org/storage3/7f0/31f/a43/7f031fa43c1e01f86e8cff846d7b374c.gif)
+
+http://basmanovdaniil.github.io/ProceduralExperiments/Web%20PGMesh.html
+
 Процедурный генератор моделей
 
 Esc — Выход
