@@ -358,6 +358,10 @@ public class Room
                 }
             }
         }
+    }
+
+    public void AddWall(RoomWall wall)
+    {
         for (var i = 0; i < corners.Count; i++)
         {
             if (corners[i] == wall.start)
@@ -365,7 +369,6 @@ public class Room
                 corners.Add(wall.end);
                 corners.Add(wall.end);
                 SortCorners();
-                GrowWall(wall);
                 return;
             }
             if (corners[i] == wall.end)
@@ -373,7 +376,6 @@ public class Room
                 corners.Add(wall.start);
                 corners.Add(wall.start);
                 SortCorners();
-                GrowWall(wall);
                 return;
             }
         }
@@ -382,7 +384,6 @@ public class Room
         corners.Add(wall.end);
         corners.Add(wall.end);
         SortCorners();
-        GrowWall(wall);
     }
 
     public static int CompareByPerimeter(Room a, Room b)
@@ -523,28 +524,8 @@ public class FloorPlanGenerator : MonoBehaviour
                 growableWalls.Clear();
                 cornerSegments.Clear();
                 centerSegments.Clear();
-                foreach (var wall in room.walls)
-                {
-                    segments.AddRange(FindSegments(wall, Color.white, room.color));
-                    foreach (var segment in segments)
-                    {
-                        if ((segment.start == wall.start && segment.end == wall.end) ||
-                            (segment.start == wall.end && segment.end == wall.start))
-                        {
-                            growableWalls.Add(segment);
-                        }
-                        else if (segment.start == wall.start || segment.end == wall.end ||
-                                    segment.start == wall.end || segment.end == wall.start)
-                        {
-                            cornerSegments.Add(segment);
-                            growableCorners++;
-                        }
-                        else
-                        {
-                            centerSegments.Add(segment);
-                        }
-                    }
-                }
+                
+                FindCandidates(room);
 
                 if (cornerSegments.Count > 0)
                 {
@@ -565,30 +546,7 @@ public class FloorPlanGenerator : MonoBehaviour
                     }
                 }
 
-                if (growableWalls.Count > 0)
-                {
-                    room.GrowWall(LongWall(growableWalls));
-                    growableRooms++;
-                }
-                else if (growCorners)
-                {
-                    if (cornerSegments.Count > 0 && room.canSpawn)
-                    {
-                        room.GrowWall(LongWall(cornerSegments));
-                        room.canSpawn = false;
-                    }
-                }
-                else if (growCenters)
-                {
-                    if (cornerSegments.Count > 0)
-                    {
-                        room.GrowWall(LongWall(cornerSegments));
-                    }
-                    else if (centerSegments.Count > 0)
-                    {
-                        room.GrowWall(LongWall(centerSegments));
-                    }
-                }
+                GrowRoom(room);
                 foreach (var wall in room.walls)
                 {
                     BresenhamLine(wall, room.color);
@@ -614,6 +572,66 @@ public class FloorPlanGenerator : MonoBehaviour
         
         renderer.material.mainTexture = texture;
         scanRenderer.material.mainTexture = scanTexture;
+    }
+
+    void FindCandidates(Room room)
+    {
+        foreach (var wall in room.walls)
+        {
+            segments.AddRange(FindSegments(wall, Color.white, room.color));
+            foreach (var segment in segments)
+            {
+                if ((segment.start == wall.start && segment.end == wall.end) ||
+                    (segment.start == wall.end && segment.end == wall.start))
+                {
+                    growableWalls.Add(segment);
+                }
+                else if (segment.start == wall.start || segment.end == wall.end ||
+                            segment.start == wall.end || segment.end == wall.start)
+                {
+                    cornerSegments.Add(segment);
+                    growableCorners++;
+                }
+                else
+                {
+                    centerSegments.Add(segment);
+                }
+            }
+        }
+    }
+
+    void GrowRoom(Room room)
+    {
+        if (growableWalls.Count > 0)
+        {
+            room.GrowWall(LongWall(growableWalls));
+            growableRooms++;
+        }
+        else if (growCorners)
+        {
+            if (cornerSegments.Count > 0 && room.canSpawn)
+            {
+                var wall = LongWall(cornerSegments);
+                room.AddWall(wall);
+                room.GrowWall(wall);
+                room.canSpawn = false;
+            }
+        }
+        else if (growCenters)
+        {
+            if (cornerSegments.Count > 0)
+            {
+                var wall = LongWall(cornerSegments);
+                room.AddWall(wall);
+                room.GrowWall(wall);
+            }
+            else if (centerSegments.Count > 0)
+            {
+                var wall = LongWall(centerSegments);
+                room.AddWall(wall);
+                room.GrowWall(wall);
+            }
+        }
     }
 
     List<RoomWall> FindSegments(RoomWall wall, Color freeColor, Color roomColor)
