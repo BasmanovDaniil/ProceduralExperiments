@@ -6,6 +6,8 @@ Khrushchyovka.cs
 =========
 ![](http://habrastorage.org/storage3/89c/fff/2e1/89cfff2e16ab381631314d16c708c72b.gif)![](http://habrastorage.org/storage3/fde/d2f/3ed/fded2f3ed9e9cfcf44189cc5d904dfb2.gif)
 
+http://basmanovdaniil.github.io/ProceduralExperiments/Khrushchyovka.html
+
 Процедурный генератор хрущёвок
 
 Левая кнопка мыши — новое здание
