@@ -1,3 +1,5 @@
+# Этот репозиторий устарел. Последнюю версию смотрите в [ProceduralToolkit](https://github.com/Syomus/ProceduralToolkit).
+
 ProceduralExperiments
 =====================
 Эксперименты с процедурной генерацией на Unity3d
