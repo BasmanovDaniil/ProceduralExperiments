@@ -1,3 +1,5 @@
+# This repository is obsolete. Latest version can be found in  [ProceduralToolkit](https://github.com/Syomus/ProceduralToolkit).
+
 # Этот репозиторий устарел. Последнюю версию смотрите в [ProceduralToolkit](https://github.com/Syomus/ProceduralToolkit).
 
 ProceduralExperiments
